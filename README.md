@@ -1,4 +1,4 @@
-# vite-plugin-ali-oss-upload-image
+# vite-plugin-ali-oss-image-uploader
 
 一个上传图片到阿里云oss的vite插件。
 
