@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-ali-oss-image-uploader",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0-rc.2",
   "description": "A vite plugin about upload image to ali oss.",
   "module": "dist/index.cjs",
   "main": "dist/index.js",
@@ -17,7 +17,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/fenglizhu/vite-plugin-ali-oss-upload.git"
+    "url": "https://github.com/fenglizhu/vite-plugin-ali-oss-image-uploader.git"
   },
   "author": "zhufengli",
   "license": "ISC",
