@@ -9,16 +9,16 @@
 # 安装
 
 ```
-pnpm install -D vite-plugin-ali-oss-upload-image
+pnpm install -D vite-plugin-ali-oss-image-uploader
 ```
 
 或者
 ```
-npm install -D vite-plugin-ali-oss-upload-image
+npm install -D vite-plugin-ali-oss-image-uploader
 ```
 或者
 ```
-yarn add -D vite-plugin-ali-oss-upload-image
+yarn add -D vite-plugin-ali-oss-image-uploader
 ```
 
 # 基本用法
@@ -26,7 +26,7 @@ yarn add -D vite-plugin-ali-oss-upload-image
 ## 在 vite.config.js 注册插件
 
 ```
-import aliOssUploader from 'vite-plugin-ali-oss-upload-image';
+import aliOssUploader from 'vite-plugin-ali-oss-image-uploader'
 
 const options = {
   region: '<Your Region>',
