@@ -1,0 +1,36 @@
+{
+  "name": "vite-plugin-ali-oss-upload-image",
+  "version": "1.0.0-rc.1",
+  "description": "A vite plugin about upload image to ali oss.",
+  "module": "dist/index.cjs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "publish-npm": "pnpm run build && pnpm publish"
+  },
+  "type": "module",
+  "keywords": [
+    "vite-plugin",
+    "ali-oss",
+    "imageUploader"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fenglizhu/vite-plugin-ali-oss-upload.git"
+  },
+  "author": "zhufengli",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.13.0",
+    "tinypng-cli": "^0.0.7",
+    "tslib": "^2.5.0",
+    "tsup": "^6.6.3",
+    "typescript": "^4.9.5",
+    "vite": "^4.1.0"
+  },
+  "dependencies": {
+    "ali-oss": "^6.17.1",
+    "mime": "^3.0.0"
+  }
+}
