@@ -53,17 +53,18 @@ npm run dev
 
 | 属性            | 描述                      | 类型     | 默认值   |
 | -----------     | --------------          | -------- | -------- |
-| enabled         | 是否开启该插件            | Boolean    | true |
-| region          | 阿里云oss区域             | String    | -        |
-| accessKeyId     | 阿里云oss accessKeyId     | String    | -        |
+| enabled         | 是否开启该插件            | Boolean    | true  |
+| region          | 阿里云oss区域             | String    | -       |
+| accessKeyId     | 阿里云oss accessKeyId     | String    | -       |
 | accessKeySecret | 阿里云oss accessKeySecret | String   | -  |
 | bucket          | 阿里云oss桶               | String   | -        |
-| dirPath         | 需要传到oss的目录           | String    | -        |
-| secure          | 支持https                 | Boolean    | false    |
-| removeEnabled   | 是否删除本地图片            | Boolean    | false      |
+| overwrite       | 是否覆盖oss同名文件         | Boolean    | false  |
+| dirPath         | 需要传到oss的目录           | String    | 年月日，比如：20230224  |
+| secure          | 支持https                 | Boolean    | false  |
+| removeEnabled   | 是否删除本地图片            | Boolean    | false  |
 | uploadExclude   | 除了哪些图片不用上传        | Array    | -        |
 | removeExclude   | 除了哪些图片不用删除        | Array    | -        |
-| tinyKey         | tinypng 的 API KEY         | String    | -        |
+| tinyKey         | tinypng 的 API KEY         | String    | -       |
 
 # 说明
 

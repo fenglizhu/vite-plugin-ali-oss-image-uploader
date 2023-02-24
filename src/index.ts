@@ -2,25 +2,11 @@ import { ResolvedConfig  } from 'vite'
 import fs from 'fs'
 import mime from 'mime'
 import { exec } from "child_process";
-import { isExist, isDir, isImage, removeImage } from "./utils/check-file";
+import { isExist, isDir, isImage, removeImage, dirPath } from "./utils/check-file";
 import { initOss, ossPut } from "./oss/index";
+import { Config } from "./types/config";
 
 const exclude = ['.git', '.github', '.gitignore', '.history', 'node_modules', '.vscode']
-
-interface Config { 
-  region: string
-  accessKeyId: string
-  accessKeySecret: string
-  bucket: string
-  endpoint: string
-  secure?: boolean // 支持https，默认false HTTP
-  enabled?: boolean
-  dirPath?: string
-  uploadExclude?: string[]
-  removeExclude?: string[]
-  removeEnabled?: boolean
-  tinyKey?: ''
-}
 
 let userConfig: Config;
 
@@ -54,6 +40,7 @@ const getFileList = (data: string[], path: string) => {
 
 const aliOssUploader = (config: Config) => {
   userConfig = config
+  userConfig.dirPath = userConfig.dirPath || dirPath()
   return {
     name: 'vite-plugin-ali-oss-upload', // 插件名字
     apply: 'serve', // 指明插件仅在 'build' 或 'serve' 模式时调用
@@ -79,10 +66,13 @@ const upload = () => {
     const localPath = fileList[i].url
     const fileName = fileList[i].fileName
     ossPut({
-      ossClient, 
-      ossPath: (userConfig.dirPath || 'storage/image') + `/${fileName}`,
+      ossClient,
+      ossPath: `${userConfig.dirPath}/${fileName}`,
       localPath,
-      bucket: userConfig.bucket
+      bucket: userConfig.bucket,
+      config: {
+        headers: { 'x-oss-forbid-overwrite': !userConfig.overwrite }
+      }
     }).then((result: any) => {
       console.log('图片路径：' + result.url);
       clear(fileName, localPath)

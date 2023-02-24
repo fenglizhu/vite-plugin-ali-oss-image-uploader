@@ -44,3 +44,13 @@ export const removeImage = (path: string) => {
     if (err) console.log('图片删除失败', err);
   });
 }
+
+export const dirPath = () => { 
+  const paddingZero = (num: string) => num.padStart(2, "0");
+  const date = new Date();
+  const da =
+    paddingZero(date.getFullYear() + '')
+    + paddingZero(date.getMonth() + 1 + '')
+    + paddingZero(date.getDate() + '')
+  return da
+}
