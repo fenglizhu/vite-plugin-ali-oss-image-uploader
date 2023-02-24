@@ -53,7 +53,7 @@ npm run dev
 
 | 属性            | 描述                      | 类型     | 默认值   |
 | -----------     | --------------          | -------- | -------- |
-| enabled         | 是否开启该插件            | Boolean    | true  |
+| enabled         | 是否开启该插件            | Boolean    | true   |
 | region          | 阿里云oss区域             | String    | -       |
 | accessKeyId     | 阿里云oss accessKeyId     | String    | -       |
 | accessKeySecret | 阿里云oss accessKeySecret | String   | -  |
