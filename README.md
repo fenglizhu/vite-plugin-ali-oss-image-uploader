@@ -55,7 +55,7 @@ npm run dev
 | -----------     | --------------          | -------- | -------- |
 | enabled         | 是否开启该插件            | Boolean    | true   |
 | region          | 阿里云oss区域             | String    | -       |
-| accessKeyId     | 阿里云oss accessKeyId     | String    | -       |
+| accessKeyId     | 阿里云oss accessKeyId     | String    |  -       |
 | accessKeySecret | 阿里云oss accessKeySecret | String   | -  |
 | bucket          | 阿里云oss桶               | String   | -        |
 | overwrite       | 是否覆盖oss同名文件         | Boolean    | false  |
